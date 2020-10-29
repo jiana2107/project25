@@ -1,22 +1,23 @@
-class Ground {
-    constructor(x,y,width,height)   {
-        var options = {
-           isStatic:true 
-        }
-    this.body = Bodies.rectangle(x,y,width,height,options);
-    this.width = width;
-    this.height = height;
-    this.image = loadImage('base.png');
-    World.add(world,this.body);
-}
-
-    display()   {
-        push();
-        var pos1 = this.body.position;
-        translate(pos1.x,pos1.y);
-        imageMode(CENTER);
-        image(this.image,0,0,this.width,this.height);
-        pop();
+class Ground{
+    constructor(x,y,w,h){
+    
+       
+    var options={isStatic:true}
+    this.width=w;
+    this.height=h;
+    
+    this.body=Bodies.rectangle(x,y,w,h,options);
+    World.add(myWorld,this.body);
     }
-
-}
+    
+    display(){
+        var pos=this.body.position;
+        push()
+        translate(pos.x,pos.y);
+        rectMode(CENTER);
+        fill("brown");
+        rect(pos.x,pos.y,this.width,this.height);
+        pop()
+    }
+    
+    }
