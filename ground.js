@@ -7,7 +7,7 @@ class Ground{
     this.height=h;
     
     this.body=Bodies.rectangle(x,y,w,h,options);
-    World.add(myWorld,this.body);
+    World.add(world,this.body);
     }
     
     display(){
