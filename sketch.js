@@ -18,24 +18,19 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	
-
-
-	
 	box1 = new Box(1100,495,150,15);
 	box2 = new Box(1185,420,15,170);
 	box3 = new Box(1015,420,15,170);
 	
-	ground1 = new Ground(700,550,1400,30);
+	ground1 = new Ground(700,530,1400,10);
 	
 	paper1 = new Paper(200,300);
-	
-	 Engine.run(engine);
   
 }
 
 
 function draw() {
-	background(206,237,227);
+	background("lightblue");
 	Engine.update(engine);
 	
 	
